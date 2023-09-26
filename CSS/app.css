@@ -147,6 +147,7 @@ ul.intro-section-list li::before {
     position: fixed;
     top: 0;
     text-align: center;
+    z-index: 1;
     /* padding: .5em initial; */
 }
 
@@ -198,9 +199,8 @@ ul.intro-section-list li::before {
 
 /* HERO SECTION */
 main {
-    position: relative;
-    z-index: -1;
-    top: 120px;
+
+    margin-top: 6.25em !important;
    
 }
 
@@ -239,7 +239,7 @@ main {
     grid-template-rows: repeat(4, 60px);
     padding-top: 1em;
     gap: 1em;
-    margin-top: 10em;
+    margin-top: 10.25em;
 }
 
 .intro-image-grid-item {
@@ -269,7 +269,7 @@ main {
     height: 500px;
     width: 100%;
     outline: 1px solid green;
-    margin-top: 20em;
+    margin-top: 12.50em;
     
 }
 
