@@ -239,17 +239,47 @@ main {
     width: 50%;
     padding: 1em;
     transform: translateY(80px);
+    animation: float-in 3s linear 1;
+}
+
+@keyframes float-in {
+    from {
+        transform-origin: 0;
+        transform: translate(-100%, 80px);
+    }
+
+    to {
+        transform: translate(0%, 80px);
+    }
+
 }
 
 .hero-image-flex-item {
     width: 50%;
+   
 }
+
+
 
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    animation: float-out 3s linear 1;
+    
+}
+
+@keyframes float-out {
+    from {
+        transform-origin: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+
 }
 
 /* INTRO SECTION */
@@ -300,6 +330,7 @@ main {
     height: 20%;
     text-align: center;
     position: relative;
+    padding: 1em;
 }
 
 
@@ -307,30 +338,78 @@ main {
     background-color: inherit;
     overflow: hidden;
     white-space: nowrap;
-    /* padding: 1em; */
+    position: relative;
+    
+     
 
   }
+
+ div.image-card {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  div.image-card .image-text {
+    position: absolute;
+    left: 15px;
+    bottom: -70px;
+    background-color: color-mix(
+        in srgb,
+         orange, 
+         transparent 30%);
+    width: 92.5%;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: bottom 300ms, opacity 300ms;
+    transition-delay: .1s;
+    margin-bottom: 1em;
+    border-radius: 0 0 10px 10px;
+    
+  }
+
+  div.image-card:hover .image-text {
+    opacity: 1;
+    bottom: 0;
+    cursor: pointer;
+    
+    
+  }
+
+
 
   div.scroll-container img {
     height: 400px;
     padding: 1em;
     object-fit: cover;
-    /* filter: brightness(50%) blur(2px); */
+    filter: brightness(50%);
     border-radius: 30px;
-    transition: all 300ms;
+    transition: filter 300ms;
+    transition-delay: .3s;
     position: relative;
-    z-index: -1;
+    animation: scrolling 3s ease-out 1;
+    
+    
 
   }
 
+  div.scroll-container:hover {
+    overflow: auto;
+    cursor: pointer;
+  }
 
-  div.scroll-container img:hover {
-    /* filter: brightness(50%) blur(3px); */
+
+  div.image-card:hover img.card-image  {
+    filter: brightness(100%);
     cursor: pointer;
   }
 
   .scroll-container::-webkit-scrollbar {
-    height: .5em
+    height: .5em;
+    
+    
   }
   .scroll-container::-webkit-scrollbar-track {
     background-color: var(--page-bg-color);
@@ -340,30 +419,23 @@ main {
     background-color: var(--header-footer-bgcolor);
   }
 
+  /* SCROLL ANIMATION */
 
-  img.float {
+  @keyframes scrolling {
+    from {
+        transform-origin: 0 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.ceaser {
     position: absolute;
-    transform: translate(-110px, 70px) scale(.5);
-    /* filter: brightness(5%); */
-    z-index: 1;
-    opacity: 0;
-    transition: all 300ms;
-  }
+}
 
-  img.float:hover {
-    opacity: 1;
-    cursor: pointer;
-    /* backdrop-filter: brightness(10%); */
-  }
-
-
-  img.float-1 {
-    transform: translate(-510px, 70px) scale(.5);
-  }
-
-  img.float-3 {
-    transform: translate(280px, 70px) scale(.5); 
-  }
 
 /* BACKDROP IMAGE SECTION */
 section.backdrop-image {
@@ -402,6 +474,10 @@ article.rating {
     text-align: center;
     filter: brightness(130%);
 
+}
+
+article.rating:hover {
+    cursor: pointer;
 }
 
 article.rating p,
