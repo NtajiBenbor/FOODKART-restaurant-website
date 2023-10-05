@@ -664,7 +664,7 @@ section.shop-hero-section article.shop-hero-text-wrapper {
 .shop-main-flex-container > * {
     outline: 1px solid greenyellow;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: ; */
 }
 
 .column-1 {
@@ -1010,8 +1010,10 @@ section.shop-hero-section {
 }
 
 .shop-main-flex-container > * {
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    flex-wrap: nowrap;
+    /* align-items: flex-start; */
     gap: 1em;
 }
 
@@ -1020,7 +1022,7 @@ section.shop-hero-section {
 }
 
 .column-2 {
-    width: 80%;
+    width: 30%;
 }
 
 }
