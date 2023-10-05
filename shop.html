@@ -6,12 +6,12 @@
     <title>FoodKart</title>
     <link rel="stylesheet" href="/CSS/app.css">
     <link rel="shortcut icon" href="img/restaurant-5841.png" type="image/x-icon">
-    <style>
+    <!-- <style>
         body {
             background-color:#f8f8f8;
            
         }
-    </style>
+    </style> -->
 </head>
 <body>
     <header class="header">
@@ -39,7 +39,12 @@
         </div>
     </header>
 
-     
+     <div class="discount-carousel-container container">
+        <div>
+            <p class="text-carousel-1">50% off breakfast items on Mondays!</p>
+            <p class="text-carousel-2">Hurry! 25% off large Pizza today!</p>
+        </div>
+     </div>
 
     <main >
         <section class="shop-hero-section backdrop-image"><!-- hero section -->
@@ -50,8 +55,10 @@
         </section> 
 
         <div class="container shop-main-flex-container"><!-- MAIN SHOP LAYOUT FLEX-CONTAINER FOR THE FOOD ITEMS AND ASIDE -->
+              
             <section class="column-1"><!-- MENU CONTAINER  -->
-                <!-- <div>
+                <!-- DROP-DOWN LIST CONTAINER  -->
+                <div>
                     <form action="#" methode="get">
                         <label for="sorting">Sort by: </label>
                         <select name="sorting" id="sorting">
@@ -61,111 +68,131 @@
                             <option value="drinks">Drinks</option>
                         </select>
                     </form>
-                </div> -->
-<!-- DROP-DOWN LIST CONTAINER  -->
+                </div>
+
                 <div class="food-menu-grid-container"><!-- GRID CONTAINER  -->
-                    <div class="food-menu-grid-item"><!-- GRID ITEM  -->
-                        <img src="./img/burger 2.jpg" alt="">
-                        <p>Grand Burger</p>
-                        <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
-                    </div>
 
-                    <div class="food-menu-grid-item"><!-- GRID ITEM  -->
-                        <img src="./img/burger 2.jpg" alt="">
-                        <p>Grand Burger</p>
-                        <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
-                    </div>
+                        <div class="food-menu-grid-item"><!-- GRID ITEM  -->
+                            <img src="./img/burger 2.jpg" alt="">
+                            <p>Grand Burger</p>
+                            <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
+                        </div>
 
-                    <div class="food-menu-grid-item"><!-- GRID ITEM  -->
-                        <img src="./img/burger 2.jpg" alt="">
-                        <p>Grand Burger</p>
-                        <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
-                    </div>
+                        <div class="food-menu-grid-item"><!-- GRID ITEM  -->
+                            <img src="./img/Dessert.jpg" alt="">
+                            <p>Grand Burger</p>
+                            <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
+                        </div>
 
-                    <div class="food-menu-grid-item"><!-- GRID ITEM  -->
-                        <img src="./img/burger 2.jpg" alt="">
-                        <p>Grand Burger</p>
-                        <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
-                    </div>
+                        <div class="food-menu-grid-item"><!-- GRID ITEM  -->
+                            <img src="./img/burger.jpg" alt="">
+                            <p>Grand Burger</p>
+                            <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
+                        </div>
 
-                    <div class="food-menu-grid-item"><!-- GRID ITEM  -->
-                        <img src="./img/burger 2.jpg" alt="">
-                        <p>Grand Burger</p>
-                        <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
-                    </div>
+                        <div class="food-menu-grid-item"><!-- GRID ITEM  -->
+                            <img src="./img/cocktails red.jpg" alt="">
+                            <p>Grand Burger</p>
+                            <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
+                        </div>
 
-                    <div class="food-menu-grid-item"><!-- GRID ITEM  -->
-                        <img src="./img/burger 2.jpg" alt="">
-                        <p>Grand Burger</p>
-                        <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
-                    </div>
+                        <div class="food-menu-grid-item"><!-- GRID ITEM  -->
+                            <img src="./img/waffle and pancakes.jpg" alt="">
+                            <p>Grand Burger</p>
+                            <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
+                        </div>
 
-                    <div class="food-menu-grid-item"><!-- GRID ITEM  -->
-                        <img src="./img/burger 2.jpg" alt="">
-                        <p>Grand Burger</p>
-                        <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
-                    </div>
+                        <div class="food-menu-grid-item"><!-- GRID ITEM  -->
+                            <img src="./img/cocktail mix.jpg" alt="">
+                            <p>Grand Burger</p>
+                            <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
+                        </div>
 
-                    <div class="food-menu-grid-item"><!-- GRID ITEM  -->
-                        <img src="./img/burger 2.jpg" alt="">
-                        <p>Grand Burger</p>
-                        <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
-                    </div>
+                        <div class="food-menu-grid-item"><!-- GRID ITEM  -->
+                            <img src="./img/Pafait.jpg" alt="">
+                            <p>Grand Burger</p>
+                            <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
+                        </div>
 
-                    <div class="food-menu-grid-item"><!-- GRID ITEM  -->
-                        <img src="./img/burger 2.jpg" alt="">
-                        <p>Grand Burger</p>
-                        <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
-                    </div>
+                        <div class="food-menu-grid-item"><!-- GRID ITEM  -->
+                            <img src="./img/Pizza-plain.jpg" alt="">
+                            <p>Grand Burger</p>
+                            <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
+                        </div>
 
-                    <div class="food-menu-grid-item"><!-- GRID ITEM  -->
-                        <img src="./img/burger 2.jpg" alt="">
-                        <p>Grand Burger</p>
-                        <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
-                    </div>
+                        <div class="food-menu-grid-item"><!-- GRID ITEM  -->
+                            <img src="./img/pizza-closeup.jpg" alt="">
+                            <p>Grand Burger</p>
+                            <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
+                        </div>
 
-                    <div class="food-menu-grid-item"><!-- GRID ITEM  -->
-                        <img src="./img/burger 2.jpg" alt="">
-                        <p>Grand Burger</p>
-                        <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
-                    </div>
+                        <div class="food-menu-grid-item"><!-- GRID ITEM  -->
+                            <img src="./img/Ceaser Salad.jpg" alt="">
+                            <p>Grand Burger</p>
+                            <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
+                        </div>
 
-                    <div class="food-menu-grid-item"><!-- GRID ITEM  -->
-                        <img src="./img/burger 2.jpg" alt="">
-                        <p>Grand Burger</p>
-                        <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
-                    </div>
+                        <div class="food-menu-grid-item"><!-- GRID ITEM  -->
+                            <img src="./img/Spaghetti shrimp.jpg" alt="">
+                            <p>Grand Burger</p>
+                            <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
+                        </div>
+
+                        <div class="food-menu-grid-item"><!-- GRID ITEM  -->
+                            <img src="./img/salad.jpg" alt="">
+                            <p>Grand Burger</p>
+                            <p class="yellow-words">&#8358;2,300 <span class="grey-words">&#8358;3,000</span></p>
+                        </div>
                 </div>
             </section>
 
             <aside class="column-2"><!-- ASIDE CONTAINER -->
                 <form action="#" method="GET">
-                    <input type="search" name="menu-search" id="menu-search">
-                    <button><img  class="icon btn" src="./img/search-2906.svg" alt="search-icon"></button>
+                    <input type="search" name="menu-search" id="menu-search" placeholder="search item">
+                    <button class=" menu-search-btn"><img  class="menu-search-icon" src="./img/search-2906.svg" alt="search-icon"></button>
 
                     <h3>Cartegory</h3>
-                    <input type="checkbox" name="cartegory" id="sandwitch" value="sandwitch">
-                    <label for="sandwitch">Sandwitches</label>
-
-                    <input type="checkbox" name="cartegory" id="burgers" value="burgers">
-                    <label for="burgers">Burgers</label>
-
-                    <input type="checkbox" name="cartegory" id="chicken" value="chicken">
-                    <label for="chicken">Chicken</label>
-
-                    <input type="checkbox" name="cartegory" id="drinks" value="drinks">
-                    <label for="drinks">Drinks</label>
-
-                    <input type="checkbox" name="cartegory" id="pizza" value="pizza">
-                    <label for="pizza">Pizza</label>
-
-                    <input type="checkbox" name="cartegory" id="salads" value="salads">
-                    <label for="salads">Salads</label>
-
-                    <input type="checkbox" name="cartegory" id="deserts" value="deserts">
-                    <label for="deserts">Deserts</label>
+                    <ul class="checkbox-list">
+                        <li>
+                            <input type="checkbox" name="cartegory" id="sandwitch" value="sandwitch">
+                            <label for="sandwitch">Sandwitches</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="cartegory" id="burgers" value="burgers">
+                            <label for="burgers">Burgers</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="cartegory" id="chicken" value="chicken">
+                            <label for="chicken">Chicken</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="cartegory" id="drinks" value="drinks">
+                            <label for="drinks">Drinks</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="cartegory" id="pizza" value="pizza">
+                            <label for="pizza">Pizza</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="cartegory" id="salads" value="salads">
+                            <label for="salads">Salads</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="cartegory" id="deserts" value="deserts">
+                            <label for="deserts">Deserts</label>
+                        </li>
+                    </ul>
+                    
                 </form>
-                
+
+                <article class="ad-wrapper">
+                    <img class="advert" src="./img/advert.jpg" alt="">
+                </article>
+
+                <article class="rangewrapper">
+                    <h4>Filter by price</h4>
+                    <input type="range" max="10" min="1" step="2">
+                </article>
             </aside>
         </div>
     </main>
