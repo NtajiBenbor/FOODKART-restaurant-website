@@ -631,13 +631,16 @@ div.sm-icon a > img {
 
 /* TEXT CAROUSEL */
 div.discount-carousel-container {
-    position: sticky;
+    position: relative;
+    background-color: var(--secondary-color);
 }
-div.discount-carousel-container  > div {
+ div.carousel-text-container {
     width: 80%;
+    /* outline: 1px solid greenyellow; */
+    padding: 1em 0;
     margin: 0 auto;
     position: relative;
-    text-align: center;
+    
 
 }
 
@@ -646,26 +649,58 @@ div.discount-carousel-container  > div {
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
+    top: 10px;
     bottom: 0;
     margin: auto;
     opacity: 0;
+    text-align: center;
+    /* animation: carousel; */
 
 }
 
 .text-carousel-1{
-    animation: carousel 10s ease dela infinite;
+    color: red;
+    animation: carousel 20s ease infinite;
 
 }
 .text-carousel-2 {
-
+    color: #ffa500;
+    animation: carousel 20s ease -5s infinite;
 }
 
 
 
 
 @keyframes carousel {
-    
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+        pointer-events: none;
+
+    }
+
+    6% {
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: all;
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: all;
+    }
+
+    30% {
+        opacity: 0;
+        transform: translateX(-50px);
+        pointer-events: none;
+    }
+
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
 }
 
 /* SHOP PAGE HERO SECTION */
@@ -706,6 +741,7 @@ section.shop-hero-section article.shop-hero-text-wrapper {
 
 .shop-main-flex-container > * {
     outline: 1px solid dimgrey ;
+    border-radius: 5px;
     
     
 }
@@ -713,6 +749,13 @@ section.shop-hero-section article.shop-hero-text-wrapper {
 .column-1,
 .column-2 {
     padding: 1.5em .5em;
+}
+
+#sorting {
+    width: 15%;
+    padding-left: 1em;
+    
+    
 }
 
 
@@ -733,46 +776,55 @@ div.food-menu-grid-item img {
     height: 80%;
     object-fit: cover;
     border-radius: 10px;
+    border: 1px solid darkgray;
 }
 
 /* COLUMN 2  STYLES */
+
 #menu-search {
     height: 36px;
     outline: none;
     border: 1px solid;
     border-right: none;
     margin: 0;
-    width: 85%;
+    width: 80%;
     padding: .5em 2em;
 }
 .menu-search-btn {
 color: var(--secondary-color);
 background-color: var(--primary-color);
 border: none;
-transform: translate(-3px, 9.5px);
-width: 32px;
-height: 32px;
-
-
+transform: translate(-3.5px, 6px);
+height: 34px;
+position: relative;
+cursor: pointer;
+transition: all 300ms;
 }
 
+.menu-search-btn:hover {
+    background-color: var(--header-footer-bgcolor);
+}
+
+
+
 .menu-search-icon {
-    transform: rotate(280deg) ;
-    width: 100%;
-    height: 100%;
-    /* padding: .2em; */
+    transform: rotate(270deg) ;
+    width: 25px;
+    height: 25px;
     object-fit: cover;
-    margin: 0;
+    position: relative;
 }
 
 .column-2 > h3 {
     margin: 0;
     padding: 0;
+    
 }
 
 .checkbox-list {
     padding: 0;
     margin: 0;
+    margin-bottom: 2em;
 }
 .checkbox-list > li {
  padding: .5em;
@@ -1074,12 +1126,13 @@ article.contact-us-section > div {
    article.footer_links {
     flex-direction: row;
     justify-content: space-around;
+    gap: 10em;
 }
 
 article.footer_links div.footer-links-wrapper {
     flex: 1;
     /* width: 23%; */
-    text-align: justify;
+    text-align: justify;  
     /* outline: 1px solid red; */
 
 }
@@ -1088,18 +1141,23 @@ article.footer_links div.footer-links-wrapper {
 /* COPPYRIGHT SECTION */
 article.Copyright-section {
     background-color: #2f2f2f;
-    padding-bottom: 1.5em;
+    /* padding-bottom: 1em; */
+  
+    
 }
 div.Copyright-flex-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    transform: translateY(20px);
 
 
  }
  div.sm-icon {
-    margin: unset; 
+    margin: unset;
+    margin: 0;
+    padding: 0; 
 }
 
 /* ======SHOP PAGE STYLES===== */
@@ -1112,10 +1170,13 @@ section.shop-hero-section {
     flex-direction: row;
     align-items: flex-start;
     gap: 1em;
+    
 }
 
 .column-1 {
  width: 75%;
+ background-color: var(--secondary-color);
+ color: var(--page-bg-color);
 }
 
 .column-2 {
