@@ -1,11 +1,16 @@
 /* ========GENERAL========= */
 html {
     font-size: 62.5%;
+    color-scheme: dark light;
 }
 
-*, ::before, ::after {
+*, *::before, *::after {
     box-sizing: border-box;
     /* outline: 1px solid lightblue; */
+}
+
+input, textarea, button, select {
+    font: inherit;
 }
 
 :root{
@@ -17,7 +22,7 @@ html {
 
 body {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     padding: 0;
     padding-top: 0;
     margin: 0;
@@ -32,7 +37,7 @@ body {
 }
 
 
-.img {
+img {
     max-width: 100%;
     display: block;
 }
@@ -65,8 +70,10 @@ img.icon {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    padding: .5em;
+    padding: .3em;
     transition: 400ms linear ;
+    gap: .5em;
+    /* margin-left: 1em; */
 }
 
 img.icon:hover {
@@ -500,7 +507,7 @@ article.contact-us-section > div {
     color: var(--page-bg-color);
     border: none;
     border-radius: 7px 0 0 7px;
-    width: 70%;
+    max-width: 70%;
 }
 
 button.form-btn {
@@ -511,6 +518,7 @@ button.form-btn {
     border-radius: 0 7px 7px 0;
     padding: 1em .5em;
     transition: all 300ms;
+    max-width: 30%;
 }
 
 button.form-btn:hover,
@@ -598,11 +606,19 @@ article.Copyright-section {
 div.Copyright-flex-container {
     display: flex;
     flex-direction: column;
+    
    
 }
 
+div.Copyright-flex-container > * {
+    /* outline:1px solid red; */
+    margin: 0;
+    margin-bottom: .5em;
+    /* padding: 0; */
+}
+
 div.sm-icon {
-    margin: 0 auto; 
+    /* margin: 0 auto;  */
 }
 
 div.sm-icon a{
@@ -751,31 +767,31 @@ section.shop-hero-section article.shop-hero-text-wrapper {
     padding: 1.5em .5em;
 }
 
-#sorting {
-    width: 15%;
-    padding-left: 1em;
-    
-    
+.column-2 {
+    outline: none;
+    order: -1;
 }
+
+#sorting {
+    width: 50%;
+    padding-left: 1em;  
+}
+
+
 
 
 
 .food-menu-grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* grid-auto-flow: row;
-    grid-auto-rows: 200px; */
-    /* outline: 3px solid red; */
     margin-top: 2em;
     gap: 1em;
-    padding: 1em;
+    padding: 0;
 }
 
 div.food-menu-grid-item img {
-    width: 100%;
-    height: 80%;
     object-fit: cover;
     border-radius: 10px;
+    /* height: 70%; */
     border: 1px solid darkgray;
 }
 
@@ -794,7 +810,7 @@ div.food-menu-grid-item img {
 color: var(--secondary-color);
 background-color: var(--primary-color);
 border: none;
-transform: translate(-3.5px, 6px);
+transform: translate(-3.5px, 7px);
 height: 34px;
 position: relative;
 cursor: pointer;
@@ -818,6 +834,7 @@ transition: all 300ms;
 .column-2 > h3 {
     margin: 0;
     padding: 0;
+    display: none;
     
 }
 
@@ -825,6 +842,7 @@ transition: all 300ms;
     padding: 0;
     margin: 0;
     margin-bottom: 2em;
+    display: none;
 }
 .checkbox-list > li {
  padding: .5em;
@@ -836,12 +854,19 @@ footer.shop-footer {
     margin-top: 8em;
 }
 
+.ad-wrapper {
+    display: none;
+}
+
 
 img.advert {
-    width: 100%;
+    /* width: 100%; */
     height: 70%;
 }
 
+.rangewrapper {
+    display: none;
+}
 .rangewrapper > input {
     color: var(--header-footer-bgcolor);
     background: var(--secondary-color);
@@ -1095,8 +1120,9 @@ section.backdrop-image {
    
    section.backdrop-image div {
        justify-content: space-between;
-       width: 80%;
+       width: 100%;
        margin: 0 auto;
+       gap: 1em;
        padding-top: 100px;
       
        
@@ -1175,13 +1201,43 @@ section.shop-hero-section {
 
 .column-1 {
  width: 75%;
- background-color: var(--secondary-color);
- color: var(--page-bg-color);
+ /* background-color: var(--secondary-color);
+ color: var(--page-bg-color); */
+ outline: none;
 }
 
 .column-2 {
     width: 25%;
 }
 
+#sorting {
+    width: 15%; 
+}
+
+.food-menu-grid-container {
+    grid-template-columns: repeat(3,1fr);
+    /* grid-auto-flow: row;
+    grid-auto-rows: 350px; */
+}
+
+.food-menu-grid-container {
+    padding: 1em;
+}
+
+.checkbox-list {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2em;
+    display: unset;
+}
+.ad-wrapper {
+    display: unset;
+}
+.column-2 > h2 {
+    display: unset;
+}
+.rangewrapper {
+    display: unset;
+}
 }
 
