@@ -910,7 +910,7 @@ footer.shop-footer {
         width: 50%;
         padding: 1em;
         transform: translateY(20px);
-        animation: float-in 3s linear 1;
+        /* animation: float-in 3s linear 1; */
         text-align: justify;
     }
     
@@ -922,7 +922,7 @@ footer.shop-footer {
     .hero-image {
         object-fit: cover;
         border-radius: 10px;
-        animation: float-out 3s linear 1;
+        /* animation: float-out 3s linear 1; */
         
     }
 
