@@ -10,7 +10,8 @@
 
 
 ## 1. Project Overview :smile:
-This is a website for a fictional restaurant called **"FoodKart"**. The site is made up of two active pages; the landing page and the shop page. This project is fully responsive on all screen sizes.
+
+This website is dedicated to showcasing the virtual presence of a fictitious restaurant named ***"FoodKart."*** The platform encompasses two dynamic pages: the engaging landing page and the interactive shop page. Designed with a commitment to accessibility and user experience, this project is crafted to be fully responsive, seamlessly adapting to and optimizing the display on all screen sizes. Whether accessed on a desktop, tablet, or mobile device, users can enjoy a consistent and visually appealing experience, ensuring that "FoodKart" remains accessible and user-friendly across various devices.
 
 ***
 check it out [here](https://foodkarrt.netlify.app/)
